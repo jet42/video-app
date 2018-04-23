@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Storage;
-use wapmorgan\MediaFile\MediaFile;
 use App\Models\Video;
 use Auth;
 
