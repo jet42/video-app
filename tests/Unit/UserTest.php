@@ -18,7 +18,7 @@ class UserTest extends TestCase
     public function testExample()
     {
         echo "\nuser test\n";
-        $user = User::updateOrCreate(['email'=>'test_user@gmail.com'], ['name'=>'Jet', 'password'=>Hash::make('secret')]);
+        $user = User::updateOrCreate(['email'=>'test_user@gmail.com'], ['name'=>'Test', 'password'=>Hash::make('secret')]);
         $this->assertTrue($user->name=='Jet');
     }
 }

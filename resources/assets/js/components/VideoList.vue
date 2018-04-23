@@ -1,3 +1,9 @@
+<style lang="scss" scoped>
+    .video-card{
+        margin-bottom:30px;
+    }
+</style>
+
 <template>
     <div class="container">
         <div class="row justify-content-center">
@@ -6,7 +12,7 @@
                     Loading...
                 </div>
                 <div v-else-if="videos.length">
-                    <div class="card card-default" v-for="video in videos">
+                    <div class="card card-default video-card" v-for="video in videos">
                         <div class="card-header" v-html=video.name></div>
                         <div class="card-body">
                             <video :src=video.file_location width="320" height="240"  type="video/mp4" controls></video>

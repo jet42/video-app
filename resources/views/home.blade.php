@@ -16,7 +16,8 @@
                     You are logged in!
 
                     <div>
-                        <a href="/videos/create">Upload</a>
+                        <div><a href="/videos/create">Upload</a></div>
+                        <div><a href="/videos">Video List</a></div>
                     </div>
 
                 </div>

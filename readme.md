@@ -15,3 +15,7 @@ run commands:
 php artisan migrate
 
 php artisan storage:link
+
+to run unit tests:
+
+./vendor/bin/phpunit
