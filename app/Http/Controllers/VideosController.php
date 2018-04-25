@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Storage;
 use App\Models\Video;
 use Auth;
+use Redirect;
 
 class VideosController extends Controller
 {
@@ -64,12 +65,11 @@ class VideosController extends Controller
             $fileformat = $file_analyzed['fileformat'];
 
         } catch (\Exception $e){
-            echo "not a valid mp4 file";
-            return;
+            return Redirect::back()->withErrors(['only mp4 files are accepted']);
+
         }
         if ($fileformat !== 'mp4'){
-            echo "only mp4 files are accepted";
-            return;
+            return Redirect::back()->withErrors(['only mp4 files are accepted']);
         }
 
         Video::create([
